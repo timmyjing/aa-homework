@@ -1,0 +1,9 @@
+<% album_live_text = album.live ? "Live" : "Studio"%>
+<ul>
+  <li>Title: <%= album.title %></li>
+  <li>Year: <%= album.year %></li>
+  <li>ID : <%= album.id %></li>
+
+  <li><%= album_live_text %></li>
+  <li><%=button_to 'Delete Album', album_url(album.id), method: :delete %></li>
+</ul>

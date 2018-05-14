@@ -1,0 +1,12 @@
+Bands
+<div id='nav-bar'>
+<%= button_to 'Create Band', new_band_url, method: :get %>
+<%= button_to 'Create New Album', new_album_url, method: :get %>
+</div>
+<br>
+<% @bands.each do |band| %>
+  <div class="container">
+  <%= render band %>
+  <%= button_to 'Edit Band', band_url(band), method: :get %>
+  </div>
+<% end  %>
